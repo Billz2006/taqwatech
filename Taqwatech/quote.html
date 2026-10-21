@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="aset/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #eaf1f4;
+      color: #1a3c34;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 950px;
+    }
+
+    /* Top Navigation / Back Button */
+    .top-nav {
+      margin-bottom: 20px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #ffffff;
+      color: #1b5e43;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 12px;
+      border: 1px solid #dce6e2;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background-color: #1b5e43;
+      color: #ffffff;
+      border-color: #1b5e43;
+    }
+
+    /* Header Section */
+    .header-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .main-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0d3b2e;
+      margin-bottom: 8px;
+    }
+
+    .sub-title {
+      font-size: 15px;
+      color: #557067;
+    }
+
+    /* Table Container Card */
+    .table-card {
+      background-color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+    }
+
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    /* Table Header (Tema Hijau TaqwaTech) */
+    .custom-table thead tr {
+      background-color: #1b5e43;
+      color: #ffffff;
+    }
+
+    .custom-table th {
+      padding: 16px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .custom-table th.center, 
+    .custom-table td.center {
+      text-align: center;
+    }
+
+    /* Table Body */
+    .custom-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid #f0f4f3;
+      font-size: 14px;
+      color: #2c423b;
+      vertical-align: middle;
+    }
+
+    /* Zebra Striping Effect */
+    .custom-table tbody tr:nth-child(even) {
+      background-color: #f8faf9;
+    }
+
+    .custom-table tbody tr:hover {
+      background-color: #f0f7f4;
+    }
+
+    .custom-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Badges / Kategori */
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .badge-sabar {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .badge-syukur {
+      background-color: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .badge-kemudahan {
+      background-color: #fff8e1;
+      color: #b78103;
+    }
+
+    .badge-ikhlas {
+      background-color: #f3e5f5;
+      color: #7b1fa2;
+    }
+
+    .badge-tawakal {
+      background-color: #e0f2f1;
+      color: #00695c;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .custom-table th, .custom-table td {
+        padding: 12px 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar bg-1 fg-2">
+  <div class="container-fluid">
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <a class="navbar-brand" href="#">Takwatech</a>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarTogglerDemo03" aria-labelledby="navbarTogglerDemo03Label">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarTogglerDemo03Label">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body">
+        <ul class="navbar-nav me-auto mb-2">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="quote.html">Quote islamic</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="Catatan.html">Catatan</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="target.html">Target kebiasaan</a></li>
+          <li class="nav-item"><a class="nav-link"href="index.html">Logout</a></li>
+        </ul>
+        </form>
+      </div>
+    </dialog>
+  </div>
+</nav>
+
+<!-- <div class="quote">
+      
+</div>
+    <div class="container">
+        <h1>Kumpulan Quote</h1>
+        <p class="subtitle">Kata-kata inspirasi untuk hari ini</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Quote</th>
+                        <th>Penulis</th>
+                        <th>Kategori</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>"Jangan takut gagal, takutlah jika tidak pernah mencoba."</td>
+                        <td>Anonim</td>
+                        <td><span class="badge motivasi">Motivasi</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>"Pendidikan adalah senjata paling ampuh untuk mengubah dunia."</td>
+                        <td>Nelson Mandela</td>
+                        <td><span class="badge pendidikan">Pendidikan</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>"Kesuksesan dimulai dari keberanian untuk melangkah."</td>
+                        <td>Anonim</td>
+                        <td><span class="badge sukses">Kesuksesan</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>"Jangan menunda pekerjaan yang bisa dilakukan hari ini."</td>
+                        <td>Benjamin Franklin</td>
+                        <td><span class="badge motivasi">Motivasi</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>"Belajar dari hari kemarin, hidup untuk hari ini."</td>
+                        <td>Albert Einstein</td>
+                        <td><span class="badge pendidikan">Inspirasi</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+<div class="container">
+    <!-- Tombol Back / Kembali -->
+    <div class="top-nav">
+      <a href="javascript:history.back()" class="btn-back">
+        <span></span> back
+      </a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header-section">
+      <h1 class="main-title">Kumpulan Quote</h1>
+      <p class="sub-title">Kata-kata inspirasi Islami untuk penyejuk hati hari ini</p>
+    </div>
+
+    <!-- Table Card -->
+    <div class="table-card">
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th class="center" style="width: 8%;">NO</th>
+            <th style="width: 52%;">QUOTE</th>
+            <th style="width: 22%;">SUMBER / PENULIS</th>
+            <th class="center" style="width: 18%;">KATEGORI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td class="center"><strong>1</strong></td>
+            <td>"Bersabarlah, karena sesungguhnya bersama kesulitan itu selalu ada kemudahan."</td>
+            <td><strong>QS. Al-Insyirah: 5-6</strong></td>
+            <td class="center"><span class="badge badge-kemudahan">Kemudahan</span></td>
+          </tr>
+
+          <!-- Row 2 -->
+          <tr>
+            <td class="center"><strong>2</strong></td>
+            <td>"Lisanmu menggambarkan hatimu, maka jagalah ucapanmu agar senantiasa mendatangkan kebaikan."</td>
+            <td><strong>Nasihat Islami</strong></td>
+            <td class="center"><span class="badge badge-sabar">Akhlak</span></td>
+          </tr>
+
+          <!-- Row 3 -->
+          <tr>
+            <td class="center"><strong>3</strong></td>
+            <td>"Jangan berduka atas apa yang hilang, sebab Allah selalu menyiapkan gantinya dengan yang lebih baik."</td>
+            <td><strong>Ibnu Qayyim</strong></td>
+            <td class="center"><span class="badge badge-ikhlas">Ikhlas</span></td>
+          </tr>
+
+          <!-- Row 4 -->
+          <tr>
+            <td class="center"><strong>4</strong></td>
+            <td>"Barangsiapa bertawakal kepada Allah, niscaya Allah akan mencukupkan segala kebutuhannya."</td>
+            <td><strong>QS. At-Talaq: 3</strong></td>
+            <td class="center"><span class="badge badge-tawakal">Tawakal</span></td>
+          </tr>
+
+          <!-- Row 5 -->
+          <tr>
+            <td class="center"><strong>5</strong></td>
+            <td>"Ketenangan hati hanya akan didapatkan ketika kita senantiasa mengingat Allah dalam setiap langkah."</td>
+            <td><strong>Pengingat Diri</strong></td>
+            <td class="center"><span class="badge badge-syukur">Ketenangan</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <script src="aset/script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>

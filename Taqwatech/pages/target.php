@@ -1,6 +1,6 @@
 <?php
 $judul_halaman = 'Target Kebiasaan - Taqwatech';
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
     <div class="halaman">

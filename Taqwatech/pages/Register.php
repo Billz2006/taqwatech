@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Taqwatech</title>
-    <link rel="stylesheet" href="../css/styleLog.css">
+    <link rel="stylesheet" href="/css/styleLog.css">
 </head>
 <body>
 
@@ -28,8 +28,8 @@
     <div class="theme-btn-container"></div>
   </section>
 
-  <script src="../asset/js/api.js"></script>
-  <script src="../asset/js/tema-login.js"></script>
-  <script src="../asset/js/register.js"></script>
+  <script src="/asset/js/api.js"></script>
+  <script src="/asset/js/tema-login.js"></script>
+  <script src="/asset/js/register.js"></script>
 </body>
 </html>

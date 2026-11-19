@@ -1,6 +1,6 @@
 <?php
 $judul_halaman = "Baca Al-Qur'an - Taqwatech";
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
     <div class="halaman">
@@ -46,5 +46,5 @@ include '../includes/header.php';
         </div>
     </div>
 
-<script src="../asset/js/quran.js"></script>
-<?php include '../includes/footer.php'; ?>
+<script src="/asset/js/quran.js"></script>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

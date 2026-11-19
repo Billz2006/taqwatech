@@ -4,7 +4,7 @@
 //   POST proses_target.php  -> kode, selesai (1 = selesai, 0 = batal)
 // Tanggal diambil dari server (zona waktu Asia/Jakarta), bukan dari browser.
 
-require '../includes/koneksi.php';
+require __DIR__ . '/../includes/koneksi.php';
 
 $hari_ini = date('Y-m-d');
 

@@ -4,7 +4,7 @@
 //   POST proses_catatan.php?aksi=tambah   -> judul, isi
 //   POST proses_catatan.php?aksi=hapus    -> id
 
-require '../includes/koneksi.php';
+require __DIR__ . '/../includes/koneksi.php';
 
 $aksi = $_GET['aksi'] ?? 'daftar';
 $metode = $_SERVER['REQUEST_METHOD'];

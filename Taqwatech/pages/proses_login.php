@@ -2,7 +2,7 @@
 // proses_login.php - memeriksa username & password akun hasil Register
 //   POST proses_login.php  -> username, password
 
-require '../includes/koneksi.php';
+require __DIR__ . '/../includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     gagal('Metode tidak diizinkan.', 405);

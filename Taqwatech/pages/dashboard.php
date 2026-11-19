@@ -1,7 +1,7 @@
 <?php
 $judul_halaman = 'Dashboard - Taqwatech';
 $css_tambahan = ['style.css'];   // CSS asli dashboard
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="row row-cols-1 md:row-cols-3 g-4">
@@ -56,4 +56,4 @@ include '../includes/header.php';
   </div>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

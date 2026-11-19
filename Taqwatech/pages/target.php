@@ -119,6 +119,6 @@ include __DIR__ . '/../includes/header.php';
         </div>
     </div>
 
-<script src="../asset/js/api.js"></script>
-<script src="../asset/js/target.js"></script>
-<?php include '../includes/footer.php'; ?>
+<script src="/asset/js/api.js"></script>
+<script src="/asset/js/target.js"></script>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

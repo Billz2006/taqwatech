@@ -2,7 +2,7 @@
 // proses_register.php - membuat akun baru
 //   POST proses_register.php  -> username, password, konfirmasi
 
-require '../includes/koneksi.php';
+require __DIR__ . '/../includes/koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     gagal('Metode tidak diizinkan.', 405);

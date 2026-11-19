@@ -1,6 +1,6 @@
 <?php
 $judul_halaman = 'Tasbih Digital - Taqwatech';
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
     <div class="halaman">
@@ -35,6 +35,6 @@ include '../includes/header.php';
       </div>
     </div>
 
-<script src="../asset/js/api.js"></script>
-<script src="../asset/js/tasbih.js"></script>
-<?php include '../includes/footer.php'; ?>
+<script src="/asset/js/api.js"></script>
+<script src="/asset/js/tasbih.js"></script>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

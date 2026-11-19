@@ -1,6 +1,6 @@
 <?php
 $judul_halaman = 'Catatan - Taqwatech';
-include '../includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
     <div class="halaman" style="max-width:640px">
@@ -31,6 +31,6 @@ include '../includes/header.php';
         <div id="notesContainer"></div>
     </div>
 
-<script src="../asset/js/api.js"></script>
-<script src="../asset/js/catatan.js"></script>
-<?php include '../includes/footer.php'; ?>
+<script src="/asset/js/api.js"></script>
+<script src="/asset/js/catatan.js"></script>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

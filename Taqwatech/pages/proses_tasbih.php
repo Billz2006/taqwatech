@@ -3,7 +3,7 @@
 //   GET  proses_tasbih.php  -> semua hitungan, contoh: {"d0": 12, "d1": 33}
 //   POST proses_tasbih.php  -> kunci, jumlah
 
-require '../includes/koneksi.php';
+require __DIR__ . '/../includes/koneksi.php';
 
 // 1. Ambil semua hitungan
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
